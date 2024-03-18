@@ -8,8 +8,63 @@
     <title>Document</title>
   </head>
   <body>
+    <style>
+      .card-products {
+        display: flex;
+        flex-direction: row;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 180px;
+        height: 180px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+      }
+      .card .card-img {
+        width: 180px;
+        height: auto;
+      }
+      .cart {
+        background-color: coral;
+      }
+    </style>
     <h1>Vue js</h1>
-    <section id="app"></section>
+    <section id="app">
+      <!-- example 1 -->
+      <!-- <div class="card-container">
+        <div class="card" @mouseover="onLogEvent">Mouse over (Enter)</div>
+        <div class="card" @mouseleave="onLogEvent">Moise leave</div>
+        <div class="card" @dblclick="onLogEvent($event , 120, 100)">
+          Double click
+        </div>
+        <div class="card" @mousemove="onMouseMoveEvent">
+          Mouse Move :{{`${x}-${y}`}}
+        </div>
+      </div> -->
+      <div class="card-products card-container">
+        <!-- solutions 1 -->
+        <!-- <div
+          class="card"
+          v-for="product in products"
+          :style="{backgroundColor : product.isCart ? 'coral' :'fff' }"
+        > -->
+        <!-- $event is default params -->
+        {{productsComputed}}
+        <div
+          class="card"
+          v-for="product in products"
+          :class="{cart : product.isCart}"
+          @dblclick="onToggleCart($event,product)"
+        >
+          <img class="card-img" v-bind:src="product.img" alt="" />
+          <h3>{{ product.id }}</h3>
+          <p>{{product.name}}</p>
+        </div>
+      </div>
+    </section>
     <script src="main.js"></script>
   </body>
 </html>

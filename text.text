@@ -1,6 +1,6 @@
-ex1:
+ex2:
 1. Cdn vue js
-2 . create app vue js ( function create app  and mount)
-3 . Data and methods
-4 . Event : click 
-5 . Conditional rendering (v-if)
+2 . Event : mouse over, leave,move, dbl click
+3 . Loop : v-for syntax item in array
+4 . Set value of HTMLT atributes : v-bind
+5 . Computed tính toán dữ liệu, theo dõi và tự động cập nhật dữ liệu
