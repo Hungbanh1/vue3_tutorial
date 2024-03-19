@@ -1,0 +1,7 @@
+1.package.json noi lưu trữ các gói , các thư viện và các câu lệnh chạy dự án 2. install vue cli 3. vuefile : A Vue file (.vue) consists of three main sections: template , script and style 4. template ref : reference to the template 5. import component and declare
+//
+props:
+emit events
+slots:
+events modifiers
+teleport
